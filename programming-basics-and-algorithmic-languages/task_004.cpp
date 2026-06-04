@@ -3,13 +3,21 @@
 
 int countElements(const std::string& str) {
     int count = 0;
+    std::string temp = "";
 
-    for (char c : str) {
+     for (char c : str) {
         if (c == ':') {
-            count++;
+            if(!temp.empty()){
+                count++;
+                temp = "";
+            } else{
+                temp = temp + c;
+            }
         }
-    }
-
+     }
+        if(!temp.empty()) {
+             count++;
+        }
     return count;
 }
 
