@@ -10,9 +10,9 @@ int countElements(const std::string& str) {
             if(!temp.empty()){
                 count++;
                 temp = "";
-            } else{
+            } 
+        }else{
                 temp = temp + c;
-            }
         }
      }
         if(!temp.empty()) {
